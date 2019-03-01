@@ -53,6 +53,11 @@ const routes = [{
         method: 'POST',
         url: '/api/users/authenticate',
         handler: userController.postAuthenticate
+    },
+    {
+        method: 'GET',
+        url: '/api/users/:id',
+        handler: userController.getSingleUser
     }
 ]
 

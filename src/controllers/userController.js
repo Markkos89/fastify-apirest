@@ -15,15 +15,14 @@ exports.getUser = async(req, reply) => {
 }
 
 // Get single user by ID
-// exports.getSingleCar = async(req, reply) => {
-//     try {
-//         const id = req.params.id
-//         const car = await Car.findById(id)
-//         return car
-//     } catch (err) {
-//         throw boom.boomify(err)
-//     }
-// }
+exports.getSingleUser = async(req, reply) => {
+    try {
+        const user = await User.findOne({_id: req.params.id})
+        return user
+    } catch (err) {
+        throw boom.boomify(err)
+    }
+}
 
 // Add a new user
 exports.addUser = async(req, reply) => {
